@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>TRENDING</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<script language="Javascript" type="text/Javascript">
+			
+			var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.themoviedb.org/3/trending/all/day?api_key=aa1a730f0b463c6a85c05d53ec822cfe",
+  "method": "GET",
+  "headers": {},
+  "data": "{}"
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+var link="http://image.tmdb.org/t/p/w185/";
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+
+  document.getElementById("img18").src=link+response .results[10].poster_path;
+  document.getElementById("img19").src=link+response .results[11].poster_path;
+  document.getElementById("img20").src=link+response .results[12].poster_path;
+  document.getElementById("img21").src=link+response .results[13].poster_path;
+  document.getElementById("img22").src=link+response .results[14].poster_path;
+  document.getElementById("img23").src=link+response .results[15].poster_path;
+  document.getElementById("img24").src=link+response .results[16].poster_path;
+  document.getElementById("img25").src=link+response .results[17].poster_path;
+  
+  
+});
+			</script>
+		<div class="page-wrap">
+
+			<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html"><span class="icon fa-home"></span></a></li>
+						<li><a href="gallery.html" class="active"><span class="icon fa-camera-retro"></span></a></li>
+						
+					</ul>
+				</nav>
+
+			<!-- Main -->
+				<section id="main">
+
+					<!-- Header -->
+						<header id="header">
+							<div>BOXOFFICE</div>
+						</header>
+
+					<!-- Gallery -->
+						<section id="galleries">
+
+							<!-- Photo Galleries -->
+								<div class="gallery">
+
+									<!-- Filters -->
+										<header>
+											<h1>Trending</h1>
+											
+										</header>
+
+										<div class="content">
+                                                
+                                                <div class="media all place">
+                                                        <img id="img18" />
+                                                    </div>
+                                                    <div class="media all thing">
+                                                        <img id="img19" />
+                                                    </div>
+                                                    <div class="media all people">
+                                                        <img id="img20" />
+                                                    </div>
+                                                    <div class="media all place">
+                                                        <img id="img21" />
+                                                    </div>
+                                                    <div class="media all place">
+                                                            <img id="img22" />
+                                                        </div>
+                                                        <div class="media all thing">
+                                                            <img id="img23" />
+                                                        </div>
+                                                        <div class="media all people">
+                                                            <img id="img24" />
+                                                        </div>
+                                                        <div class="media all place">
+                                                            <img id="img25" />
+                                                        </div>
+                                                   
+										</div>
+								</div>
+						</section>
+
+					
+
+					
+				</section>
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
